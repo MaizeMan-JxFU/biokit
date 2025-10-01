@@ -1,10 +1,14 @@
+{% set name = "biokit" %}
+{% set version = "1.0" %}
+{% set git_url = "" %}
+{% set git_rev = "main" %}
 package:
-  name:
-  version:
+  name: "{{ name|lower }}"
+  version: "{{ version }}"
 
 source:
-  git_rev:
-  git_url:
+  git_rev: https://github.com/MaizeMan-JxFU/biokit.git
+  git_url: main
 
 requirements:
   build:
@@ -16,7 +20,7 @@ requirements:
 
 test:
   imports:
-    -
+    - biokit
 
 about:
-  home:
+  home: "https://github.com/MaizeMan-JxFU/biokit"
